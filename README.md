@@ -137,7 +137,7 @@ project/
 - Runs on schedule (daily/hourly)
 - Uses task dependencies:
 
-fetch → transform → load
+fetch → transform (includes load/output)
 
 
 ---
