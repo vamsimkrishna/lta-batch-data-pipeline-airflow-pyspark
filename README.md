@@ -80,20 +80,26 @@ This project builds a **scalable ETL pipeline** that:
 ```
 project/
 │
-├── dags/ # Airflow DAG definitions
-├── src/ # Core ETL scripts
-│ ├── fetch.py
-│ ├── transform.py
-│ └── load.py
+├── dags/
+│   └── daily_boonlay_ETL.py
+│
+├── src/
+│   ├── fetch_lta_data.py
+│   └── transform_bus_data_v1.py
 │
 ├── data/
-│ ├── raw/
-│ └── processed/
+│   ├── raw/
+│   └── processed/
+│       └── kpis/
 │
-├── config/ # Config files / environment settings
-├── logs/ # Airflow logs
-├── notebooks/ # Analysis / debugging notebooks
-└── requirements.txt
+├── config/
+├── logs/
+├── notebooks/
+├── plugins/
+├── .env.example
+├── .gitignore
+├── requirements.txt
+└── README.md
 ```
 
 ---
