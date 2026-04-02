@@ -1,4 +1,3 @@
-🚀 FULL README (Copy Everything Below)
 # 🚀 LTA Batch Data Pipeline using Airflow & PySpark
 
 ## 📌 Overview
