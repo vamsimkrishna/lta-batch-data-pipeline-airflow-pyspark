@@ -1,36 +1,60 @@
 # 🚀 LTA Batch Data Pipeline using Airflow & PySpark
 
+---
+
 ## 📌 Overview
 
-This project builds a **batch data engineering pipeline** using **Apache Airflow and PySpark** to process transport-style data inspired by Singapore LTA systems.
+This project builds a **production-style batch data engineering pipeline** using **Apache Airflow and PySpark** to process transport-style data inspired by Singapore LTA systems.
 
 The pipeline automates:
-- Data ingestion
-- Data transformation
-- Data storage for reporting
+- ✅ Data ingestion
+- ✅ Data transformation
+- ✅ Data storage for reporting
 
-It simulates a real-world scenario where daily data is processed to generate KPI-ready datasets.
+It simulates a **real-world ETL workflow** where daily data is processed into **KPI-ready datasets**.
 
 ---
 
 ## 🎯 Problem Statement
 
-Transport systems generate large volumes of daily data, but raw data is:
-- Unstructured
-- Inconsistent
-- Not directly usable for analysis
+Transport systems generate **large volumes of raw data**, which is:
+- ❌ Unstructured  
+- ❌ Inconsistent  
+- ❌ Not analytics-ready  
 
-This project solves that by building a **scalable ETL pipeline** that:
-- Cleans raw data
-- Applies transformations
-- Produces structured outputs for reporting
+### ✅ Solution
+
+This project builds a **scalable ETL pipeline** that:
+- Cleans and validates raw data  
+- Applies business transformations  
+- Produces structured outputs for reporting  
 
 ---
 
 ## 🏗️ Architecture
 
 
-Raw Data → Airflow DAG → PySpark Processing → Processed Data Output
+      +-------------------+
+      |   Raw Data        |
+      +-------------------+
+                │
+                ▼
+      +-------------------+
+      |   Airflow DAG     |
+      | (Orchestration)   |
+      +-------------------+
+                │
+                ▼
+      +-------------------+
+      |   PySpark         |
+      | (Transformation)  |
+      +-------------------+
+                │
+                ▼
+      +-------------------+
+      | Processed Data    |
+      | (KPI Ready)       |
+      +-------------------+
 
 
 ### Flow:
@@ -53,7 +77,7 @@ Raw Data → Airflow DAG → PySpark Processing → Processed Data Output
 
 ## 📂 Project Structure
 
-
+```
 project/
 │
 ├── dags/ # Airflow DAG definitions
@@ -70,7 +94,7 @@ project/
 ├── logs/ # Airflow logs
 ├── notebooks/ # Analysis / debugging notebooks
 └── requirements.txt
-
+```
 
 ---
 
@@ -159,12 +183,6 @@ fetch → transform → load
 
 ---
 
-## 🎤 1-Minute Interview Pitch
-
-This project demonstrates a batch data pipeline built using Airflow and PySpark. It processes raw transport data into structured outputs for analytics. It showcases ETL design, workflow orchestration, and scalable data processing, similar to real-world data engineering systems.
-
----
-
 ## 🧾 How to Run
 
 1. Install dependencies:
@@ -186,14 +204,7 @@ airflow standalone
 ## 👨‍💻 Author
 
 Vamsi Krishna  
-Data Engineering Enthusiast  
+Data Engineer 
 Singapore  
 
 ---
-
-## ⭐ Why This Project Matters
-
-This project is designed to:
-- Be **interview-ready**
-- Showcase **real-world pipeline design**
-- Demonstrate **core data engineering skills**
